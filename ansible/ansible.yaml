@@ -1,0 +1,29 @@
+---
+
+- hosts: all
+  gather_facts: yes
+  become: true
+
+  pre_tasks:
+
+    - name: Install Updates (yum Package Manager)
+      tags: always
+      yum:
+        update_only: true
+        update_cache: yes
+        state: latest
+      when: ansible_pkg_mgr == "yum"
+    
+    - name: Install Updates (apt Package Manager)
+      tags: always
+      apt:
+        upgrade: yes
+        update_cache: yes
+        state: latest
+      when: ansible_pkg_mgr == "apt"
+
+  roles:
+    - init_enviroment
+    - install_docker
+    - install_kind
+

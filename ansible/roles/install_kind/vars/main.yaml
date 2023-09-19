@@ -1,0 +1,2 @@
+kind_binary_address: https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64
+kind_dest_path: /usr/local/bin/kind

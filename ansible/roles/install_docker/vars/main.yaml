@@ -1,0 +1,2 @@
+docker_gpg_key_address: https://download.docker.com/linux/ubuntu/gpg
+docker_repo_address: deb https://download.docker.com/linux/ubuntu focal stable

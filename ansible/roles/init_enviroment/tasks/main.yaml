@@ -1,0 +1,17 @@
+- name: Install Required Pakages To Run App (apt)
+  tags: install_pakages
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: 
+    - "{{ required_packages }}"
+  when: ansible_pkg_mgr == "apt"
+
+- name: Install Required Pakages To Run App (yum)
+  tags: install_pakages
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items: 
+    - "{{ required_packages }}"
+  when: ansible_pkg_mgr == "yum"

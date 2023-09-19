@@ -1,0 +1,15 @@
+- name: Download and install kind
+  get_url:
+    url: "{{ kind_binary_address }}"
+    dest: "{{ kind_dest_path }}"
+    mode: '0755'
+
+- name: Verify kind installation
+  command:
+    cmd: kind version
+  register: kind_version
+  changed_when: false
+
+- name: Display kind version
+  debug:
+    msg: "Installed {{ kind_version.stdout }}"
