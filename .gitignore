@@ -1,0 +1,53 @@
+# Ansible related
+*.retry
+*.log
+*.swp
+*.bak
+*.orig
+*~
+
+# Terraform related
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+terraform.tfstate.d/
+
+# Common Directories to exclude
+.tmp/
+*.tmp/
+*.log/
+*.bak/
+*.cache/
+*.idea/
+*.vscode/
+
+# Common files
+*.DS_Store
+*.egg-info/
+*.installed.cfg
+*.pyc
+*.pyo
+*.env
+*.bak
+*.swp
+*.back
+*.merge
+*.log
+*.tgz
+*.pid
+*.pid.lock
+*.pyc
+*.pyo
+*.rej
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
